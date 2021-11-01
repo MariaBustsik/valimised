@@ -76,6 +76,10 @@ if(isset($_REQUEST["kustutasid"])){
     }
     echo "</table>";
     ?>
+    <?php
+    include ('footer.php');
+
+    ?>
     </body>
     </html>
 <?php
