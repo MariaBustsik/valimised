@@ -32,40 +32,26 @@ if(isset($_REQUEST["haal"])) {
     <head>
         <title>Valimiste leht</title>
         <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     </head>
     <body>
-    <h1>Uue nimi lisamine</h1>
+    <h1>Uue kandidaadi nimi lisamine</h1>
     <form action="?">
-        <label for="uusnimi">Nimi</label>
+        <label for="uusnimi">Sisesta nimi</label>
         <input type="text" id="uusnimi" name="uusnimi" placeholder="uus nimi">
         <input type="submit" value="OK">
     </form>
-    <h1>Valimiste leht</h1>
 
+    <img src="style/valimised.gif" alt="pic">
 
-    <?php
-    //valimiste tabeli sisu vaatamine andmebaasist
-    global $yhendus;
-    $kask=$yhendus->prepare('
-    SELECT id, nimi, punktid FROM valimised WHERE avalik=1');
-    $kask->bind_result($id, $nimi, $punktid);
-    $kask->execute();
-    echo "<table>";
-    echo "<tr><th>Nimi</th><th>Punktid</th><th>Anna oma hääl</th>";
-
-    while($kask->fetch()){
-        echo "<tr>";
-        echo "<td>".htmlspecialchars($nimi)."</td>";
-        echo "<td>".($punktid)."</td>";
-        echo "<td><a href='?haal=$id'>Lisa +1 punkt</a></td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-    ?>
     </body>
     </html>
 <?php
 $yhendus->close();
+
+
 /*CREATE TABLE valimised(
     id int primary key auto_increment,
     nimi varchar(100),

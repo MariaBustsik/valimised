@@ -3,7 +3,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #b4a7d6;
+
 }
 
 li {
@@ -18,7 +19,60 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #F2DCDB;
+    font-family: 'Questrial', sans-serif;
 }
+
+body{
+    background-color:#F2DCDB;
+    font-family: 'Questrial', sans-serif;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 500px;
+}
+
+table{
+    border: 5px groove;
+    margin-bottom: 10px;
+}
+
+th {
+    color: white;
+    padding: 5px;
+    background: #c27ba0;
+}
+
+td {
+
+    border-top: 3px ridge #741b47;
+    padding: 8px;
+    background: white;
+}
+
+input[type=submit]{
+
+    padding: 5px;
+    background-color: #48367c;
+    color: #fff;
+    border-radius: 10px;
+}
+
+a:active, a:visited, a:link {
+    text-decoration: none;
+    color: #351c75;
+    text-transform: uppercase;
+    font-family: 'Questrial', sans-serif;
+}
+
+h1, input[type="text"]{
+    font-family: 'Questrial', sans-serif;
+}
+
+
+
+

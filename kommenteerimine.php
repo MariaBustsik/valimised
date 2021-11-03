@@ -30,6 +30,9 @@ if(isset($_REQUEST["haal"])) {
     <head>
         <title>Valimiste leht</title>
         <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     </head>
     <body>
     <h1>Valimiste leht + kommenteerimine</h1>
@@ -45,7 +48,7 @@ if(isset($_REQUEST["haal"])) {
     $kask->bind_result($id, $nimi, $punktid, $kommentaarid);
     $kask->execute();
     echo "<table>";
-    echo "<tr><th>Nimi</th><th>Punktid</th><th>Anna oma hääl</th>";
+    echo "<tr><th>Nimi</th><th>Punktid</th><th>Anna oma hääl</th><th>Kommentaarid</th>";
 
     while($kask->fetch()){
         echo "<tr>";
