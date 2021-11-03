@@ -1,8 +1,4 @@
 <?php
-include ('navigation.php');
-
-?>
-<?php
 require_once ('conf.php');
 global $yhendus;
 // uue kommentaari lisamine
@@ -35,6 +31,11 @@ if(isset($_REQUEST["haal"])) {
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     </head>
     <body>
+    <ul>
+        <li><a href="valimised.php">Home page</a></li>
+        <li><a href="nimideHaldus.php">Admin page</a></li>
+        <li><a href="kommenteerimine.php">Kasutaja page</a></li>
+    </ul>
     <h1>Valimiste leht + kommenteerimine</h1>
 
 
