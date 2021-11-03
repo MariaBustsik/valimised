@@ -94,7 +94,7 @@ if(isSet($_REQUEST["knull"])){
     ?>
     <?php
 
-    //include ('footer.php');
+
 
     ?>
     <a href="https://github.com/MariaBustsik/valimised">GitHub link: github.com/MariaBustsik/valimised</a>
